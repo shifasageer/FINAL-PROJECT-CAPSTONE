@@ -1,0 +1,35 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    /* background-color: #f8f9fa;
+    border-radius: 10px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  h2 {
+    color: #343a40;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+  }
+  
+  .btn {
+    background-color: #ddc882;
+
+    
+    padding: 10px 20px;
+  }
+  
+  .btn:hover {
+    background-color: #62572a;
+ 
+  }
+  

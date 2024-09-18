@@ -1,0 +1,23 @@
+<div class="quote-container">
+  <!-- Crisis Support Section -->
+  <div class="crisis-support-container">
+    <!-- <button (click)="toggleCrisisSupport()" class="crisis-support-button">
+      {{ showCrisisSupport ? "Hide Crisis Support" : "Show Crisis Support" }}
+    </button> -->
+    <div *ngIf="showCrisisSupport" class="crisis-support-info">
+      <h2>Crisis Support</h2>
+      <p>
+        If you are in need of immediate assistance, please reach out to the
+        Crisis Text Line:
+      </p>
+      <a
+        href="https://findahelpline.com/countries/in"
+        target="_blank"
+        class="crisis-support-link"
+      >
+        Visit Crisis Text Line
+      </a>
+      <p>Text HOME to 741741 to connect with a crisis counselor.</p>
+    </div>
+  </div>
+</div>

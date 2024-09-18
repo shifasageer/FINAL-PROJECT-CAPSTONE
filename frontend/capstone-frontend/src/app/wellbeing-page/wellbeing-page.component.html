@@ -1,0 +1,302 @@
+<!-- <main class="container my-4">
+    <div class="row gy-4">
+     
+      
+      <div class="col-12">
+        
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Day Planner</h5>
+            <p class="card-text">Plan your day effectively.</p>
+            <button class="btn " routerLink="/day-planner">Go to Day Planner</button>
+            
+          </div>
+        </div>
+     
+      </div>
+
+  
+    
+      <div class="col-md-8">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Work Life Balance</h5>
+            <p class="card-text">Manage your work-life balance.</p>
+            <button class="btn " routerLink="/work-life-balance">Go to Work Life Balance</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Diet</h5>
+            <p class="card-text">Track your diet and nutrition.</p>
+            <button class="btn " routerLink="/diet">Go to Diet</button>
+          </div>
+        </div>
+      </div>
+  
+     
+      <div class="col-md-8">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sleep</h5>
+            <p class="card-text">Monitor your sleep patterns.</p>
+            <button class="btn " routerLink="/sleep">Go to Sleep</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Screen Time</h5>
+            <p class="card-text">Manage your screen time.</p>
+            <button class="btn " routerLink="/screen-time">Go to Screen Time</button>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="col-md-4">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Zen Mode</h5>
+            <p class="card-text">Enter Zen Mode for relaxation.</p>
+            <button class="btn" routerLink="/zen-mode">Go to Zen Mode</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sample 1</h5>
+            <p class="card-text">Sample feature 1 description.</p>
+            <button class="btn" routerLink="/sample-1">Go to Sample 1</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card custom-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sample 2</h5>
+            <p class="card-text">Sample feature 2 description.</p>
+            <button class="btn" routerLink="/sample-2">Go to Sample 2</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+   -->
+
+<!-- Header Section -->
+<!-- <header class="header-section">
+       <nav class="navbar navbar-expand-lg navbar-light">
+           <div class="container-fluid">
+               <a class="navbar-brand" href="#">Safety wellbeing App</a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav ms-auto">
+                       <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="#">Home</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Services</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Specialists</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Our Clinic</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Contact</a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </nav>
+   </header> -->
+
+<!-- Main Section -->
+
+
+<!-- <div class="d-flex ">
+  <div>Logo</div>
+  <div class="d-flex "> <a href="">Contact</a> <a href="">Home</a></div>
+</div> -->
+<main class="d-flex main">
+  
+  <section class="section-left flex-fill d-flex flex-column">
+    <h1 class="display-4 care">
+      We take care of your Emotional and<br />
+      Mental Health
+    </h1>
+
+    <h5 class=" care">
+      Analyze your wealth<br />
+      Dive into your inner peace with zen mode
+    </h5>
+
+    <div class="d-flex button-up">
+      <button>Analyze</button>
+      <button><a href="/zen">Zen mode</a></button>
+    </div>
+  </section>
+
+  <section class="section-right flex-fill">
+    <img
+      src="assets/medditation3.png"
+      alt="Mental Health"
+      class="background-image"
+    />
+  </section>
+</main>
+
+<h1 class="overview-text">Your Daily Wellbeing Overview</h1>
+
+<!-- Cards Section -->
+<section class="cards-section d-flex justify-content-center mt-5">
+  <div class="wellbeing-container">
+    <div class="card-item dayplanner"></div>
+
+    <div class="writing">
+      <h3>Daily Wellbeing Reflection Survey</h3>
+      <h5>
+        Daily self-assessment of emotional and mental states, encouraging users
+        to reflect on their experiences each day
+      </h5>
+      <a href="/dayplanner" class="card-link">More</a>
+    </div>
+
+    <div class="analysis">
+      <div *ngIf="result" class="results">
+        <h4><strong>Depression Level:</strong> {{ result.depression }}</h4>
+        <h4><strong>Anxiety Level:</strong> {{ result.anxiety }}</h4>
+        <h4><strong>Stress Level:</strong> {{ result.stress }}</h4>
+        <p *ngIf="resultLastUpdated != ''">
+          Last updated : {{ resultLastUpdated }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wellbeing-container">
+    <div class="card-item ai-chat"></div>
+    <div class="writing">
+      <h3>Wellbeing Assistant</h3>
+      <h5>
+        Your personal wellbeing assistant.
+      </h5>
+      <a href="/chat" class="card-link">More</a>
+    </div>
+
+    <div class="analysis">
+      
+    </div>
+  </div>
+
+  <div class="wellbeing-container">
+    <div class="card-item work-life-balance"></div>
+    <div class="writing">
+      <h3>Work-Life Balance</h3>
+      <h5>
+        Finding a balance that allows individuals to excel in their professional
+        lives while also maintaining a fulfilling personal life
+      </h5>
+      <a href="/worklife" class="card-link">More</a>
+    </div>
+
+    <div class="analysis">
+      <div class="container mt-5">
+        <h4 class="text-center mb-4">Your Work-Life Balance Score</h4>
+        <p class="text-center mb-4" *ngIf="score !== null">Your score is: {{ score }}%</p>
+        <p class="text-center mb-4" *ngIf="score === null">No score available.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wellbeing-container">
+    <div class="card-item sleep"></div>
+    <div class="writing">
+      <h3>Sleep</h3>
+      <h5>
+        Personal sleep cycles monitor that reflect your sleep patterns and
+        analyse average duration.
+      </h5>
+      <a href="/sleep" class="card-link">More</a>
+    </div>
+
+    <div class="analysis">
+      <app-sleep-chart></app-sleep-chart>
+    </div>
+  </div>
+
+  <div class="wellbeing-container">
+    <div class="card-item zen-mode"></div>
+    <div class="writing">
+      <h3>Zen Mode</h3>
+      <h5>
+        Perfect for those who tend to get distracted by their phones, or simply
+        want a moment of peace
+      </h5>
+      <a href="/zen" class="card-link">More</a>
+    </div>
+
+    <div class="analysis"></div>
+  </div>
+
+  <div class="wellbeing-container">
+    <div class="card-item screen-time"></div>
+
+    <div class="writing">
+      <h3>Screen Time</h3>
+      <h5>
+        Task of analyzing and creating a report on which applications and
+        websites are used by the user for how much time
+      </h5>
+      <a href="/screentime" class="card-link">More</a>
+    </div>
+
+    <div class="analysis">
+
+      <div class="charts-container">
+        <h4>Average App Usage Over 5 Days</h4>
+        <apx-chart
+          [series]="averageUsageChartOptions.series"
+          [chart]="averageUsageChartOptions.chart"
+          [labels]="averageUsageChartOptions.labels"
+          [title]="averageUsageChartOptions.title"
+        ></apx-chart>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="wellbeing-container">
+    <div class="card-item diet"></div>
+
+    <div class="writing">
+      <h3>Diet</h3>
+      <h5>
+        A nutritional assessment that allows "technicians" to analyze the
+        patterns, quantity, and nutritional quality of food consumed
+      </h5>
+      <a href="/diet" class="card-link">More</a>
+    </div>
+
+    <div class="analysis">
+
+      <h4 class="text-center mb-4">Total Calories for {{ specificDate }}: {{ totalCaloriesForDate }} Kcal</h4>
+    </div>
+
+    
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

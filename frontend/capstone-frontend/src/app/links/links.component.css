@@ -1,0 +1,65 @@
+/* learn-on-the-go.component.css */
+.safety-tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+   
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+   
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  }
+   
+  .thumbnail-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+   
+  .thumbnail {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+   
+  .card-content {
+    flex: 1;
+  }
+   
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+   
+  p {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+   
+  .video-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0b1015;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+   
+  .video-link:hover {
+    background-color: #36d600;
+  }

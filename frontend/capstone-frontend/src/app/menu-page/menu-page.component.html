@@ -1,0 +1,234 @@
+<main class="menu-page">
+
+
+
+<div class="contacts">
+    <div class="conatiner">
+
+        <div class="instructions"><button class="instruction-button" (click)="navigateToFeature('instructions')"><img src="assets/info2.jpg" alt="instru" class="instruction-img"><span class="btn-text">Instruction</span></button></div>
+    
+    </div>
+    
+    <!-- <div class="conatcts-left">
+        <img src="assets/trustedcontact.jpg" alt="trust" class="trustcontact-img">
+
+    </div> -->
+     <div class="heading">
+        <h1 > Together, </h1>
+        <h1>  we empower individuals to  </h1>
+        <h1>transform their lives by</h1>
+        <h1> ensuring safety and well-being</h1> 
+       
+    
+     </div>
+     
+   
+    
+
+</div>
+<div class="manage-text"> <h2>Manage your contacts</h2> </div>
+
+<div class="conatcts-2">
+    <div class="conatcts-2-right">
+        <div class="contacts-right">
+            
+                <div  class="contact-card">
+                    <a (click)="navigateToFeature('addcontacts')">
+                    <div class="cards ">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Add Trusted Contacts</h5>
+                            <p class="card-text">Add contacts you trust for emergency help</p>
+                            
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                
+
+
+            
+            
+
+    
+            <div class="contact-card">
+                <a (click)="navigateToFeature('viewcontacts')">
+                <div class="cards ">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">View Your Contact List</h5>
+                        <p class="card-text">Check your list of contacts.</p>
+                        
+                    </div>
+                </div>
+            </a>
+            </div>
+    
+           
+    
+            <div class="contact-card">
+                <a (click)="navigateToFeature('deletecontacts')">
+                <div class="cards ">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Delete Contacts</h5>
+                        <p class="card-text">Remove contacts from your list.</p>
+    
+                    </div>
+                </div>
+                </a>
+            </div>
+           
+        </div>
+    
+
+
+    </div>
+
+    
+    <div class="conatcts-2-left">
+
+
+    </div>
+
+</div>
+
+<!------------------------------------------------------------------------------->
+
+<!-- 
+<div class="bottom-cards">
+   
+    <div class="cardbot">
+        <div ><img class="cardbotimg" src="assets/help me.png" alt="helpme"></div>
+        <div class="cardbotcontent">
+            <a (click)="navigateToFeature('editsos')">
+            <h5 class="card-title">Edit SOS Message</h5>
+            <p class="card-text">Customize your SOS message.</p>
+        </a>
+        </div>
+
+    </div>
+
+    <div class="cardbot">
+
+        <div ><img class="cardbotimg" src="assets/tips.png" alt=""></div>
+        <div class="cardbotcontent">
+            <a (click)="navigateToFeature('tips')">
+            <h5 class="card-title">Tips</h5>
+            <p class="card-text">Read tips and best practices.</p>
+        </a>
+        </div>
+
+    </div>
+
+    <div class="cardbot">
+
+        <div ><img class="cardbotimg" src="assets/emergencyicon.png" alt=""></div>
+        <div class="cardbotcontent">
+            <a (click)="navigateToFeature('helpline')">
+            <h5 class="card-title">Emergency Helpline Numbers</h5>
+            <p class="card-text">Find important helpline numbers.</p>
+        </a>
+        </div>
+
+    </div>
+
+    <div class="cardbot">
+
+        <div ><img class="cardbotimg" src="assets/trustcontact.jpg" alt=""></div>
+        <div class="cardbotcontent">
+            <a (click)="navigateToFeature('links')">
+            <h5 class="card-title">Learn On the Go</h5>
+            <p class="card-text">Find important helpline numbers.</p>
+        </a>
+        </div>
+
+    </div>
+
+
+
+</div> -->
+
+<!------------------------------------------------------------------------------->
+
+
+<section class="cards-section d-flex justify-content-center mt-5">
+    <div class="contacts-container">
+      <div class="card-item dayplanner"></div>
+  
+      <div class="writing">
+        <h3>Edit SOS Message</h3>
+        <h5>
+            Customize your SOS message according to the situation you are seeking help for.
+        </h5>
+        <a href="/editsos" class="card-link">More</a>
+      </div>
+  
+      <!-- <div class="analysis">
+        
+      </div> -->
+    </div>
+  
+    <div class="contacts-container">
+      <div class="card-item ai-chat"></div>
+      <div class="writing">
+        <h3>Tips</h3>
+        <h5>
+            Read tips and best practices
+        </h5>
+        <a href="/tips" class="card-link">More</a>
+      </div>
+  
+      <!-- <div class="analysis">
+        
+      </div> -->
+    </div>
+  
+    <div class="contacts-container">
+      <div class="card-item work-life-balance"></div>
+      <div class="writing">
+        <h3>Emergency helpline numbers</h3>
+        <h5>
+            Find important helpline numbers
+        </h5>
+        <a href="/helpline" class="card-link">More</a>
+      </div>
+  
+      <!-- <div class="analysis">
+       
+      </div> -->
+    </div>
+  
+    <div class="contacts-container">
+      <div class="card-item sleep"></div>
+      <div class="writing">
+        <h3>Learn On the Go</h3>
+        <h5>
+          Find best videos to learn pratices and methods you need to follow in an emergency situation
+        </h5>
+        <a href="/links" class="card-link">More</a>
+      </div>
+  
+      <!-- <div class="analysis"></div> -->
+       
+    </div>
+  
+    <div class="contacts-container">
+      <div class="card-item zen-mode"></div>
+      <div class="writing">
+        <h3>Sample</h3>
+        <h5>
+          Perfect for those who tend to get distracted by their phones, or simply
+          want a moment of peace
+        </h5>
+        <a href="#" class="card-link">More</a>
+      </div>
+  
+      <!-- <div class="analysis"></div> -->
+    </div>
+  
+    
+  
+
+
+</section>
+
+
+</main>

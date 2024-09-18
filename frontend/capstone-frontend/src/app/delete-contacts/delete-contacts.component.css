@@ -1,0 +1,23 @@
+.container {
+    max-width: 600px;
+}
+
+h2 {
+    color: #dc3545;
+}
+
+button {
+    width: 100%;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+input.ng-invalid.ng-touched {
+    border-color: #dc3545;
+}
+
+.alert {
+    text-align: center;
+}

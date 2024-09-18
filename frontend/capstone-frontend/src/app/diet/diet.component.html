@@ -1,0 +1,223 @@
+<!-- <div class="container mt-5">
+    <h2 class="text-center mb-4">Diet Tracker</h2>
+    <form  >
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="breakfast">Breakfast</label>
+            <input type="text" id="breakfast" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="lunch">Lunch</label>
+            <input type="text" id="lunch" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="dinner">Dinner</label>
+            <input type="text" id="dinner" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="drink">Drink</label>
+            <input type="text" id="drink" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="snack">Snack</label>
+            <input type="text" id="snack" class="form-control" >
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Calculate Nutrients</button>
+        <button type="button" class="btn btn-success mt-3" >Save Diet</button>
+    </form>
+
+    <div >
+        <h4 class="mt-5">Nutrient Breakdown</h4>
+        <p>Calories: </p>
+        <p>Carbs: </p>
+        <p>Sugar: </p>
+        <p>Protein: </p>
+        <p>Fiber: </p>
+        <p>Fat: </p>
+    </div>
+</div> -->
+
+
+<!-- 
+{{ nutrientData.totalCalories }}g
+{{ nutrientData.totalCarbs }}g
+{{ nutrientData.totalSugar }}g
+{{ nutrientData.totalProtein }}g
+{{ nutrientData.totalFiber }}g
+{{ nutrientData.totalFat }}g
+(ngSubmit)="onSubmit()"
+(click)="saveDiet()"
+*ngIf="nutrientData" -->
+
+<!-- --------------------------------------------------------------------- -->
+
+<!-- <div class="container">
+    <h2>Diet Tracker</h2> -->
+  
+    <!-- Form to input diet details -->
+    <!-- <form (ngSubmit)="saveDiet()">
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" class="form-control" [(ngModel)]="diet.date" name="date" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="breakfast">Breakfast:</label>
+        <input type="text" id="breakfast" class="form-control" [(ngModel)]="diet.breakfast" name="breakfast">
+      </div>
+  
+      <div class="form-group">
+        <label for="lunch">Lunch:</label>
+        <input type="text" id="lunch" class="form-control" [(ngModel)]="diet.lunch" name="lunch">
+      </div>
+  
+      <div class="form-group">
+        <label for="dinner">Dinner:</label>
+        <input type="text" id="dinner" class="form-control" [(ngModel)]="diet.dinner" name="dinner">
+      </div>
+  
+      <div class="form-group">
+        <label for="drink">Drink:</label>
+        <input type="text" id="drink" class="form-control" [(ngModel)]="diet.drink" name="drink">
+      </div>
+  
+      <div class="form-group">
+        <label for="snack">Snack:</label>
+        <input type="text" id="snack" class="form-control" [(ngModel)]="diet.snack" name="snack">
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Save Diet</button>
+    </form>
+   -->
+    <!-- Button to calculate total calories and nutrients -->
+    <!-- <button (click)="calculateNutrients()" class="btn btn-info mt-3">Calculate Nutrients</button> -->
+  
+    <!-- Display calculated nutrients -->
+    <!-- <div *ngIf="diet.totalCalories !== undefined">
+      <h4>Nutritional Information</h4>
+      <p>Total Calories: {{ diet.totalCalories }} kcal</p>
+      <p>Total Carbs: {{ diet.totalCarbs }} g</p>
+      <p>Total Sugar: {{ diet.totalSugar }} g</p>
+      <p>Total Protein: {{ diet.totalProtein }} g</p>
+      <p>Total Fiber: {{ diet.totalFiber }} g</p>
+      <p>Total Fat: {{ diet.totalFat }} g</p>
+    </div> -->
+  
+    <!-- Form to retrieve diet details by date -->
+    <!-- <div class="form-group mt-5">
+      <label for="retrieveDate">Retrieve Diet Info for Specific Date:</label>
+      <input type="date" id="retrieveDate" class="form-control" [(ngModel)]="specificDate">
+      <button (click)="getDietByDate()" class="btn btn-secondary mt-2">Get Diet Info</button>
+    </div> -->
+  
+    <!-- Display retrieved diet details -->
+    <!-- <div *ngIf="dietData">
+      <h4>Diet Details for {{ retrieveDate }}</h4>
+      <ul>
+        <li>Breakfast: {{ dietData.breakfast }}</li>
+        <li>Lunch: {{ dietData.lunch }}</li>
+        <li>Dinner: {{ dietData.dinner }}</li>
+        <li>Drink: {{ dietData.drink }}</li>
+        <li>Snack: {{ dietData.snack }}</li>
+      </ul>
+    </div>
+  </div>
+   -->
+
+
+  <div class="container">
+    <h2>Diet Tracker</h2>
+  
+    <!-- Form to input diet details -->
+    <form (ngSubmit)="saveDiet()">
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" class="form-control" [(ngModel)]="diet.date" name="date" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="breakfast">Breakfast:</label>
+        <input type="text" id="breakfast" class="form-control" [(ngModel)]="diet.breakfast" name="breakfast">
+      </div>
+  
+      <div class="form-group">
+        <label for="lunch">Lunch:</label>
+        <input type="text" id="lunch" class="form-control" [(ngModel)]="diet.lunch" name="lunch">
+      </div>
+  
+      <div class="form-group">
+        <label for="dinner">Dinner:</label>
+        <input type="text" id="dinner" class="form-control" [(ngModel)]="diet.dinner" name="dinner">
+      </div>
+  
+      <div class="form-group">
+        <label for="drink">Drink:</label>
+        <input type="text" id="drink" class="form-control" [(ngModel)]="diet.drink" name="drink">
+      </div>
+  
+      <div class="form-group">
+        <label for="snack">Snack:</label>
+        <input type="text" id="snack" class="form-control" [(ngModel)]="diet.snack" name="snack">
+      </div>
+  
+      <button type="submit" class="btn save">Save Diet</button>
+    </form>
+
+
+    
+    <!-- Display calculated nutrients -->
+    <div *ngIf="diet.totalCalories !== undefined">
+        <h4>Nutritional Information</h4>
+        <p>Total Calories: {{ diet.totalCalories }} kcal</p>
+        <p>Total Carbs: {{ diet.totalCarbs }} g</p>
+        <p>Total Sugar: {{ diet.totalSugar }} g</p>
+        <p>Total Protein: {{ diet.totalProtein }} g</p>
+        <p>Total Fiber: {{ diet.totalFiber }} g</p>
+        <p>Total Fat: {{ diet.totalFat }} g</p>
+    </div>
+
+
+     <!-- Button to get total calories for specific date -->
+     <div class="form-group mt-5">
+      <label for="retrieveDate">Retrieve Diet Info for Specific Date:</label>
+      <input type="date" id="retrieveDate" class="form-control" [(ngModel)]="specificDate">
+      <button (click)="getDietByDate()" class="btn diet mt-2">Get Diet Info</button>
+    </div>
+
+   <!-- Display retrieved diet details -->
+    <div *ngIf="dietData; else noData">
+      <h4>Diet Details for {{ specificDate }}</h4>
+      <ul>
+        <li>Breakfast: {{ dietData.breakfast }}</li>
+        <li>Lunch: {{ dietData.lunch }}</li>
+        <li>Dinner: {{ dietData.dinner }}</li>
+        <li>Drink: {{ dietData.drink }}</li>
+        <li>Snack: {{ dietData.snack }}</li>
+        <li>Total Calories: {{ dietData.totalCalories }}</li>
+        <li>Total Carbs: {{ dietData.totalCarbs }}</li>
+        <li>Total Sugar: {{ dietData.totalSugar }}</li>
+        <li>Total Protein: {{ dietData.totalProtein }}</li>
+        <li>Total Fiber: {{ dietData.totalFiber }}</li>
+        <li>Total Fat: {{ dietData.totalFat }}</li>
+      </ul>
+    </div>
+
+    <ng-template #noData>
+      <p>No information to display.</p>
+    </ng-template>
+    
+     
+  </div>
+
+
+    
+
+
+
+  
+   
+  
+  

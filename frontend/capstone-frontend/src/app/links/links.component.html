@@ -1,0 +1,19 @@
+<h3>Learn on the go :</h3>
+<div class="safety-tips-container">
+  <div *ngFor="let tip of safetyTips" class="card">
+    <div class="thumbnail-container">
+      <img
+        [src]="getThumbnailUrl(tip.videoLink)"
+        alt="{{ tip.title }} thumbnail"
+        class="thumbnail"
+      />
+    </div>
+    <div class="card-content">
+      <h3>{{ tip.title }}</h3>
+      <p>{{ tip.description }}</p>
+      <a [href]="tip.videoLink" target="_blank" class="video-link"
+        >Watch Video</a
+      >
+    </div>
+  </div>
+</div>

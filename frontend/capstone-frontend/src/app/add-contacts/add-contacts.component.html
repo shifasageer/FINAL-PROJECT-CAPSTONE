@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Add Emergency Contact</h2>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <!-- Name Input -->
+      <div class="form-group mb-3">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          class="form-control"
+          
+          name="name"
+          required
+          placeholder="Enter Contact Name" [(ngModel)]="contact.firstName" 
+        />
+        <div *ngIf="contactForm.submitted && !contactForm.controls['name']?.valid" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+  
+      <!-- Contact Number Input -->
+      <div class="form-group mb-3">
+        <label for="contactNumber">Contact Number</label>
+        <div class="input-group">
+          <input
+            id="contactNumber"
+            class="form-control"
+           
+            name="contactNumber"
+            required
+            
+            placeholder="+91 000000000"
+            [(ngModel)]="contact.contactNo" 
+          />
+        </div>
+        <div *ngIf="contactForm.submitted && !contactForm.controls['contactNumber']?.valid" class="text-danger">
+          Valid 10-digit contact number is required.
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Add Contact</button>
+      <h4>{{message}}</h4>
+    </form>
+  </div>
+
+<!-- [(ngModel)]="contact.name"
+[(ngModel)]="contact.number" -->

@@ -1,0 +1,108 @@
+<div class="container">
+  <header>
+    <h1>Sleep Tracker</h1>
+    <p class="quote">"Sleep is the best meditation." — Dalai Lama</p>
+  </header>
+
+  <div class="card-container">
+    <div class="card add-record-card">
+      <h2>Add Your Sleep Record</h2>
+      <form (ngSubmit)="onSubmit()">
+        <label for="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          [(ngModel)]="sleepRecord.date"
+          name="date"
+          required
+        />
+
+        <label for="day">Day:</label>
+        <input
+          type="text"
+          id="day"
+          [(ngModel)]="sleepRecord.dayOfWeek"
+          name="day"
+          required
+        />
+
+        <label for="bedtime">Bedtime:</label>
+        <input
+          type="time"
+          id="bedtime"
+          [(ngModel)]="sleepRecord.bedtime"
+          name="bedtime"
+          required
+        />
+
+        <label for="wakeup-time">Wakeup Time:</label>
+        <input
+          type="time"
+          id="wakeup-time"
+          [(ngModel)]="sleepRecord.wakeupTime"
+          name="wakeup-time"
+          required
+        />
+
+        <label for="duration">Duration (hours):</label>
+        <input
+          type="number"
+          id="duration"
+          [(ngModel)]="sleepRecord.duration"
+          name="duration"
+          step="0.1"
+          required
+        />
+
+        <label for="notes">Additional Notes:</label>
+        <textarea
+          id="notes"
+          [(ngModel)]="sleepRecord.additionalNotes"
+          name="notes"
+          rows="4"
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="card data-card">
+      <h2>Average Sleep Duration</h2>
+      <form (ngSubmit)="onGetAverageDuration(durationPeriod.value)">
+        <label for="duration-period">Select Period:</label>
+        <select id="duration-period" #durationPeriod>
+          <option value="week">week</option>
+          <option value="month">month</option>
+          <option value="year">year</option>
+        </select>
+        <button type="submit">Get Average Duration</button>
+      </form>
+      <div id="average-duration">
+        <p *ngIf="averageDuration">Average Duration: {{ averageDuration }}</p>
+      </div>
+    </div>
+
+    <div class="card estimated-time-card">
+      <h2>Estimated Sleep and Wake-Up Times</h2>
+      <button (click)="onGetEstimatedSleepTime()">
+        Get Estimated Sleep Time
+      </button>
+      <div id="estimated-sleep-time">
+        <p *ngIf="estimatedSleepTime">
+          Estimated Sleep Time: {{ estimatedSleepTime }}
+        </p>
+      </div>
+
+      <button (click)="onGetEstimatedWakeUpTime()">
+        Get Estimated Wake-Up Time
+      </button>
+      <div id="estimated-wake-up-time">
+        <p *ngIf="estimatedWakeUpTime">
+          Estimated Wake-Up Time: {{ estimatedWakeUpTime }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-charts></app-charts> -->

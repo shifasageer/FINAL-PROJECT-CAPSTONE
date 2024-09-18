@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Edit SOS Message</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="sosMessage"
+        >Type your new SOS message : [ location will automatically be
+        send.]</label
+      >
+      <p></p>
+      <textarea
+        id="sosMessage"
+        class="form-control"
+        rows="5"
+        [(ngModel)]="sosMessage"
+        name="sosMessage"
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+  </form>
+  <div *ngIf="responseMessage" class="alert alert-info mt-3">
+    {{ responseMessage }}
+  </div>
+</div>
+<!-- [(ngModel)]="sosMessage" -->
+<!-- *ngIf="message" class="alert alert-info mt-3" -->

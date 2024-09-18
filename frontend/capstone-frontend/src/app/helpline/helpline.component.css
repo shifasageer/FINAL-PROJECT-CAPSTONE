@@ -1,0 +1,31 @@
+/* General styling for the container */
+.container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .card {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 16px;
+  }
+  
+  /* Optional: add specific colors to card borders */
+  .card.border-primary {
+    border-color: #007bff;
+  }
+  

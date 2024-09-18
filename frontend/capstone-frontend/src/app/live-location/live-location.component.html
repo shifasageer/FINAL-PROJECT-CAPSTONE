@@ -1,0 +1,60 @@
+<div class="container">
+    <h1>Live Location Tracker</h1>
+    <button (click)="trackLocation()">Track Live Location</button>
+    <button (click)="stopTracking()" [disabled]="!watchId">Stop Tracking</button>
+   
+    <!-- Live Tracking Status -->
+    <div
+      *ngIf="locationStatus"
+      [ngClass]="{
+        'status-success': isLiveTrackingSafe,
+        'status-danger': !isLiveTrackingSafe
+      }"
+      class="status-message"
+    >
+      {{ locationStatus }}
+    </div>
+    <div *ngIf="error" class="error-message">{{ error }}</div>
+   
+    <p></p>
+   
+    <!-- Map Container -->
+    <div id="map" style="height: 500px"></div>
+   
+    <!-- Manual Location Entry Form -->
+    <div class="manual-location">
+      <h2>Manual Location Entry</h2>
+      <form (ngSubmit)="submitManualLocation()">
+        <label for="manualLatitude">Latitude:</label>
+        <input
+          id="manualLatitude"
+          [(ngModel)]="manualLatitude"
+          name="manualLatitude"
+          type="number"
+          step="any"
+          required
+        />
+        <br />
+        <label for="manualLongitude">Longitude:</label>
+        <input
+          id="manualLongitude"
+          [(ngModel)]="manualLongitude"
+          name="manualLongitude"
+          type="number"
+          step="any"
+          required
+        />
+        <br />
+        <button type="submit">Submit Manual Location</button>
+      </form>
+      <p
+        *ngIf="manualLocationStatus"
+        [ngClass]="{
+          'status-success': isManualLocationSafe,
+          'status-danger': !isManualLocationSafe
+        }"
+      >
+        {{ manualLocationStatus }}
+      </p>
+    </div>
+  </div>

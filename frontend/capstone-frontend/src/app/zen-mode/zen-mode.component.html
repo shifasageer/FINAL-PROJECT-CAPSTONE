@@ -1,0 +1,79 @@
+<!-- <body>
+  
+
+<header >
+  <h1 class="zen-mode-heading">Zen Mode</h1>
+    
+</header>
+
+
+
+<div class="zen-mode-container" *ngIf="!isZenModeActive">
+
+    <h1 class="quote">{{ quote }}</h1>
+    <p class="author">- {{ author }}</p>
+    
+    <select [(ngModel)]="selectedDuration" class="zen-mode-dropdown">
+      <option *ngFor="let option of durationOptions" [value]="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+    <div class="zen-mode-buttons">
+      <button (click)="startZenMode(selectedDuration)" class="zen-mode-button">
+        Start Zen Mode
+      </button>
+    </div>
+  </div>
+ 
+  <div class="zen-mode-container" *ngIf="isZenModeActive">
+    <h2 class="zen-mode-heading">Zen Mode is Active</h2>
+    <div class="zen-mode-buttons">
+      <button (click)="stopZenMode()" class="zen-mode-button">
+        Stop Zen Mode
+      </button>
+    </div>
+  </div>
+ 
+  Display Zen Mode completion message
+  <div class="zen-mode-message" *ngIf="zenModeMessage">
+    <p>{{ zenModeMessage }}</p>
+  </div>
+
+</body> -->
+
+
+<!-- zen-mode.component.html -->
+<div class="zen-mode-container container-fluid">
+  <!-- Background Video -->
+ 
+    <!-- Background animtion-->
+        <div class="background">
+           <div class="cube"></div>
+           <div class="cube"></div>
+           <div class="cube"></div>
+           <div class="cube"></div>
+          <div class="cube"></div>
+        </div>
+
+  <!-- Content on top of the video -->
+  <div class="content">
+    <h1>Zen Mode</h1>
+    <p *ngIf="quote">Quote: "{{ quote }}"</p>
+    <p *ngIf="author">- {{ author }}</p>
+
+    <div *ngIf="!isZenModeActive">
+      <label for="duration">Select Duration:</label>
+      <select id="duration" [(ngModel)]="selectedDuration">
+        <option *ngFor="let option of durationOptions" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+      <button (click)="startZenMode(selectedDuration)">Start Zen Mode</button>
+    </div>
+
+    <div *ngIf="isZenModeActive">
+      <p>{{ zenModeMessage }}</p>
+      <button (click)="stopZenMode()">Stop Zen Mode</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+/* General Container Styles */
+ 
+ 
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+   
+  /* Crisis Support Section Styles */
+  .crisis-support-container {
+   
+   
+    background-color: rgba(255, 0, 0, 0.7); /* Red background for urgency */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+   
+  .crisis-support-button {
+   
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+   
+  .crisis-support-button:hover {
+    background-color: #c62828;
+  }
+   
+  .crisis-support-info {
+   
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+   
+  .crisis-support-link {
+    color: #ffeb3b;
+    text-decoration: underline;
+  }

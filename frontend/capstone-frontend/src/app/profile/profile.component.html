@@ -1,0 +1,27 @@
+<div class="profile-container">
+  <h2>User Profile</h2>
+  <div *ngIf="userProfile">
+    <div class="profile-item">
+      <label>User ID:</label>
+      <span>{{ userId }}</span>
+    </div>
+    <div class="profile-item">
+      <label>Name:</label>
+      <span>{{ userProfile.username }}</span>
+    </div>
+    <div class="profile-item">
+      <label>Email:</label>
+      <span>{{ userProfile.emailaddress }}</span>
+    </div>
+
+    <div class="profile-item">
+      <label>Password:</label>
+      <span>{{ userProfile.confirmpassword }}</span>
+    </div>
+    <div class="profile-item">
+      <label>Pincode:</label>
+      <span>{{ userProfile.pincode }}</span>
+    </div>
+    <!-- Add more fields as per your requirement -->
+  </div>
+</div>

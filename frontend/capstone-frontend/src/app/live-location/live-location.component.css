@@ -1,0 +1,110 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+   
+  h1 {
+   
+    color: #333;
+  }
+   
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+   
+  button:disabled {
+    background-color: #6c757d;
+  }
+   
+  .status-message,
+  .error-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+   
+  .status-success {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+   
+  .status-danger {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+   
+  .error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+   
+  .manual-location {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+   
+  .manual-location h2 {
+    margin-top: 0;
+    color: #333;
+  }
+   
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+   
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+   
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+   
+  button[type="submit"] {
+    background-color: #5b51c9;
+  }
+   
+  button[type="submit"]:hover {
+    background-color: #882121;
+  }
+   
+  p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+   
+   

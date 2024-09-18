@@ -1,0 +1,16 @@
+
+<!-- (ngSubmit)="onDelete()" -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Delete Contact</h2>
+    <form (ngSubmit)="onDelete()">
+      <div class="form-group">
+        <label for="contactName">Contact Name</label>
+        <select class="form-control" id="contactName" [(ngModel)]="selectedContactName" name="contactName">
+          <option *ngFor="let contact of contactArray" [value]="contact.firstName">{{ contact.firstName }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-danger mt-3">Delete Contact</button>
+    </form>
+    <p *ngIf="message" class="text-success mt-3">{{ message }}</p>
+    <p *ngIf="errorMessage" class="text-danger mt-3">{{ errorMessage }}</p>
+  </div>

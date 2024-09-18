@@ -1,0 +1,120 @@
+/* Custom styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .header.transparent {
+    background-color: transparent;
+  }
+
+  .header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Mild background color */
+  }
+
+  .header img {
+    height: 50px;
+  }
+
+  .header .nav-links a {
+    color: rgb(66 58 58);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 800;
+  }
+
+  .main-section {
+    background: url('/assets/girl3.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    
+  }
+.gaaap{
+    gap: 30px;
+}
+  .main-section h1 {
+    font-size: 2.9rem;
+    margin-bottom: 20px;
+    color: rgb(66 58 58);
+    font-weight: 800;
+    margin: 20px;
+  }
+
+  .main-section .btn-primary {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    
+  }
+
+  .mission-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+   
+  }
+
+  .mission-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(194, 159, 114);
+    font-weight: 600;
+  }
+
+  .mission-section p {
+    font-weight: 100;
+    color: #9da0a5;
+  }
+
+  .footer {
+    background-color: #e5d3b1;
+    color: #f4f8fc;
+    font-weight: 200;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .btn {
+    height: 45px;
+    width: 150px;
+    background-color: rgb(215, 211, 170);
+    color: rgb(66 58 58);
+    font-weight: 700;
+    text-align: center;
+
+  }
+
+  .card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(170, 156, 106);
+    
+    
+
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+  }
+  

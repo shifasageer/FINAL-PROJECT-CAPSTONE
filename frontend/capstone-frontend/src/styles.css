@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    width: 8px;  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;  /* Transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(199, 193, 193, 0.2);  /* Transparent thumb (the part that moves) */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(173, 165, 165, 0.4);  /* Slightly darker thumb on hover */
+}

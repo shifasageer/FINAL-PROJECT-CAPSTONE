@@ -1,0 +1,170 @@
+<!-- <div class="card-container">
+
+  <div class="heart-container">
+    <img class="handimage" src="assets/handimage.jpg" alt="handimage">
+    <div class="emergencycard">
+     
+      <p>Emergency features</p>
+      <button class="sos">SOS</button>
+      
+    </div>
+  </div>
+
+  
+  <div class="bottom-cards">
+    <div class="card">
+      <h2>Wellbeing</h2>
+      <p>Wellbeing features</p>
+      <button class="card-button" (click)="navigateToFeature('well')">Your Wellness</button>
+    </div>
+
+    <div class="card">
+      <h2>Profile</h2>
+      <p>dashboard</p>
+      <button class="card-button">Learn More</button>
+    </div>
+  </div> 
+ 
+</div> -->
+<!-- //** -----------------------------------------------------------------**/ -->
+
+<!-- 
+<header class="d-flex justify-content-around align-items-center py-3">
+  <h3>Prince and Shifa App</h3>
+  <button class="btn btn-primary" (click)="navigateToFeature('profile')">Profile</button>
+</header>
+
+
+<main class="container my-4">
+  <div class="row">
+   
+    <div class="col-md-5">
+      <div class="card text-center bg-light mb-3 shadow">
+        <div class="card-body">
+          <h5 class="card-title">YOU ARE SAFE WITH US!</h5>
+          <p class="card-text">
+            Personal safety at your fingertips. We assist you in rescuing in the event of a serious emergency.
+          </p>
+          <button class="btn btn-danger" (click)="onSosClick()">SOS</button>
+
+          <button class="btn menubutton btn-primary" (click)="navigateToFeature('menu')">Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card text-center bg-light mb-3 shadow">
+        <div class="card-body">
+          <h5 class="card-title">Care from the Inside Out</h5>
+          <p class="card-text">
+            Discover more about your well-being and how to maintain it.
+          </p>
+          <button class="btn btn-success" (click)="navigateToFeature('well')">More on Well Being</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card text-center bg-light mb-3 shadow">
+        <div class="card-body">
+          <h5 class="card-title">Report an Incident</h5>
+          <p class="card-text">
+            Report an Accident.
+          </p>
+          <button class="btn btn-success" (click)="navigateToFeature('report')">Report</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</main> -->
+
+<!-- -------------------------------------------------------- -->
+<script>
+  window.addEventListener("scroll", function () {
+    console.log(window.scrollY);  
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      // Adjust the value to when you want the color change to occur
+      navbar.style.backgroundColor = "rgba(0, 0, 255, 1)"; // Background color after scrolling
+    } else {
+      navbar.style.backgroundColor = "transparent"; // Revert to transparent when not scrolled
+    }
+  });
+</script>
+
+<header id="navbar">
+  <h3>Safety wellbeing App</h3>
+  <div>
+    <button class="btn" (click)="navigateToFeature('helpline')">
+      Helpline Numbers
+    </button>
+    <!-- <a [routerLink]="['/landing']" fragment="well">Well being</a> -->
+    <button class="btn" (click)="navigateToFeature('profile')">Profile</button>
+    <button class="btn" (click)="logOut()">Log Out</button>
+  </div>
+</header>
+
+<main class="mainsec">
+  <div class="mainsecleft">
+    <h2>You Are Safe With Us!</h2>
+    <p>
+      Personal safety at your fingertips. We assist you <br />
+      in rescuing in the event of a serious emergency. <br />Press SOS button to
+      send emergency alert message.
+    </p>
+    <div class="button-group">
+      <button class="btn-danger sos-button" (click)="onSosClick()">
+        <img src="assets/alarm.png" alt="" style="width: 50px; height: 50px" />
+        SOS
+      </button>
+      <button class="sos-button" (click)="navigateToFeature('live')">
+        <img src="assets/map-pin.png" alt="" style="width: 50px; height: 50px" />
+         Live
+      </button>
+    </div>
+  </div>
+  <div class="mainsecright"></div>
+</main>
+
+<div class="section3">
+  <div class="section3-left">
+    <div class="secondary-right">
+      <h3>Safety Hub</h3>
+      <p>Enhance your safety and preparedness <br>with these essential tools and resources</p>
+      <button class="btn-report" (click)="navigateToFeature('menu')">
+        More
+      </button>
+    </div>
+  </div>
+
+  <section class="section3-right"></section>
+</div>
+
+<div class="section2" id="well">
+  <div class="section-left"></div>
+
+  <section class="section-right">
+    <div class="secondary-card">
+      <h3>Care from the Inside Out</h3>
+      <p>Discover more about your well-being and how to maintain it.</p>
+      <button class="btn-well" (click)="navigateToFeature('well')">
+        More on Well Being
+      </button>
+    </div>
+  </section>
+</div>
+
+<!-- <div class="section4"></div> -->
+
+<footer>
+  <div>
+    <p class="mb-1">&copy; 2024 Emergency & Well-Being App</p>
+    <p class="mb-0">
+      <a href="/emergency-contacts" class="text-light">Emergency Contacts</a> |
+      <a href="/well-being" class="text-light">Well-Being Tracker</a> |
+      <a href="/contact-us" class="text-light">Contact Us</a>
+    </p>
+  </div>
+</footer>
