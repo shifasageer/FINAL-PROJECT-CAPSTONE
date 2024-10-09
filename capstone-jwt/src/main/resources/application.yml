@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: jwtcapstone
+
+  datasource:
+    url: jdbc:postgresql://localhost:50792/test
+    username: postgres
+    password: postgres
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: wellbeing
+            uri: lb://wellbeing
+            predicates:
+              - Path=/wellbeing/**
+            filters:
+              - StripPrefix=1
+
+          - id: emergency
+            uri: lb://emergency
+            predicates:
+              - Path=/emergency/**
+            filters:
+              - StripPrefix=1
+
+server:
+  port: 9099
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
